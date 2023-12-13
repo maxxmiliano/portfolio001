@@ -13,11 +13,23 @@
   }
 
   :root{
-    --bg-color: rgba(24,96,73);
+    /*--bg-color: rgba(24,96,73);
     --text-color: rgba(36,113,88);
     --main-color: rgba(106,178,155);
     --white-color: rgba(228,213,199);
-    --shadow-color: rgba(182,163,33);
+    --shadow-color: rgba(182,163,33);*/
+
+    --bg-color: #3c515d;
+    --text-color: #000000;
+    --main-color:#40957f;
+    --white-color:rgb(3, 3, 3);
+    --shadow-color: #0d05fc;
+
+    /*--bg-color: ;
+    --text-color: ;
+    --main-color: ;
+    --white-color: ;
+    --shadow-color: ;*/
   }
 
   html{
@@ -29,6 +41,7 @@
     background: var(--bg-color);
     color: var(--text-color);
   }
+
   .header{
     position: fixed;
     top: 0;
@@ -39,7 +52,14 @@
     display: flex;
     align-items: center;
     z-index: 100;
+    transition: .5s;
  }
+
+  .header.sticky {
+     background: var(--bg-color);
+     box-shadow: 0 .1rem 1rem var(--shadow-color);
+  }
+
  .logo{
     font-size: 2rem;
     color: var(--main-color);
@@ -47,6 +67,7 @@
     cursor: default;
     margin-right: auto;
   }
+
  .navbar  a {
   position: relative;
   font-size: 1.7rem;
@@ -99,6 +120,7 @@
 
  .home-content p{
   font-size: 1.6rem;
+  margin-right: 3rem;
  }
 
  .home-content .social-midia a {
@@ -236,6 +258,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+  background: #fff;
  }
 
  .about-img img{
@@ -258,6 +282,7 @@
 
  .about-content p {
   font-size: 1.6rem;
+
  }
 
 
