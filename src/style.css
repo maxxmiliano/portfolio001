@@ -374,7 +374,7 @@
   box-shadow: 0 0 1rem rgb(0, 0, 0, .1);
   overflow: hidden;
  }
-.portfolio-box img {
+.portfolio-box  {
   width: 100%;
   transition: .5s ease;
 }
