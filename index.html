@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
     <title>Portfólio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -14,8 +15,8 @@
         <a href="#" class="logo">Portfólio</a>
         <nav class="navbar">
             <a href="#home" class="active">home</a>
-            <a href="#about">about</a>
-            <a href="#services">services</a>
+            <a href="#about">Sobre</a>
+            <a href="#services">Habilidades</a>
             <a href="#portfolio">portfolio</a>
             <a href="#contact">contact</a>
         </nav>
@@ -80,8 +81,8 @@
         </div>
 
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Ola aqui estão Meus Projetos!</h3>
+            <h2 class="heading">Sobre <span>Mim</span></h2>
+            <h3>Ola aqui Falarei um Pouco sobre mim!</h3>
             <p>Lorem ipsum dolor sit amet consectetur
                adipisicing elit. Et, sunt. Voluptatem 
                dignissimos officiis aliquid minima 
@@ -196,7 +197,47 @@
         </div>
 
     </section>
+    <div class="testimonial-container">
+        <h2 class="heading">Valuable <span>Testimonial</span></h2>
 
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+               <div class="testimonial-content swiper-wrapper">
+                 <div class="testimonial-slide swiper-slide">
+                    <img src="/img/foto mx03.png" alt="">
+                    <h3>Etapas do projeto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Repudiandae vel incidunt quas, vero minus possimus nostrum
+                       ipsa quo! Mollitia odio itaque iure, reprehenderit atque
+                       vel quo exercitationem soluta maxime tempore.</p>
+                    
+                 </div>
+                 <div class="testimonial-slide swiper-slide">
+                    <img src="/img/foto mx02.png" alt="">
+                    <h3>Códigos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Repudiandae vel incidunt quas, vero minus possimus nostrum
+                       ipsa quo! Mollitia odio itaque iure, reprehenderit atque
+                       vel quo exercitationem soluta maxime tempore.</p>
+                    
+                 </div>
+                 <div class="testimonial-slide swiper-slide">
+                    <img src="/img/foto mx01.png" alt="">
+                    <h3>Layers</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Repudiandae vel incidunt quas, vero minus possimus nostrum
+                       ipsa quo! Mollitia odio itaque iure, reprehenderit atque
+                       vel quo exercitationem soluta maxime tempore.</p>
+                    
+                 </div>
+               </div>
+                 <div class="swiper-button-next"></div>
+                 <div class="swiper-button-prev"></div>
+                 <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="src/script.js"></script>
 </body>
 </html>
