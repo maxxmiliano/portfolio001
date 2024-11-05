@@ -13,24 +13,20 @@
   }
 
   :root{
-    /*--bg-color: rgba(24,96,73);
-    --text-color: rgba(36,113,88);
-    --main-color: rgba(106,178,155);
-    --white-color: rgba(228,213,199);
-    --shadow-color: rgba(182,163,33);*/
+    
 
-    --bg-color: #3c515d;
+    --bg-color: #233037;
     --text-color: #000000;
     --main-color:#40957f;
     --white-color:rgb(3, 3, 3);
     --shadow-color: #0d05fc;
+}
 
-    /*--bg-color: ;
-    --text-color: ;
-    --main-color: ;
-    --white-color: ;
-    --shadow-color: ;*/
-  }
+.dark-mode {
+    --bg-color: #000508;
+    --text-color: #fdfdfd;
+    --shadow-color: rgba(138, 131, 131, 0.7);
+}
 
   html{
     font-size: 62.5%;
@@ -99,7 +95,7 @@
    opacity: .7;
  }
 
-  #darckMode-icon {
+  #darkMode-icon {
     font-size: 2.4rem;
     color: var(--white-color);
     cursor:pointer;
@@ -306,6 +302,7 @@
 
  .about-content p {
   font-size: 1.6rem;
+  text-align: center;
   margin: 2rem 0 3rem;
  }
 
@@ -393,7 +390,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.994), var(--main-color));
   color: var(--white-color);
   display: flex;
   justify-content: center;
@@ -413,7 +410,7 @@
   font-size: 3rem;
 }
 .portfolio-layer p{
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: .3rem 0 1rem;
 }
 .portfolio-layer a{
@@ -790,4 +787,52 @@
   }
   
 }
+@media (max-width: 617px) {
+  .portfolio .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  #darkMode-icon {
+    right: 6rem;
+  }
+  .home {
+    padding: 0 3% 30rem;
+  }
+  .home .profession-box .profession:nth-child(1) {
+    transform:  rotate(-90deg) translate(-110px, -220px);
+  }
+  .home .profession-box .profession:nth-child(2) {
+    transform:  rotate(0deg) translate(5px, -335px);
+  }
+  .home .profession-box .profession:nth-child(3) {
+    transform:  rotate(90deg) translate(-105px, -440px);
+  }
+  .home .profession-box .profession:nth-child(4) {
+    transform:  rotate(180deg) translate(-210px, -335px);
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 365px) {
+  .about-img img {
+    width: 90vw;
+
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+
 

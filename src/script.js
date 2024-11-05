@@ -42,7 +42,7 @@ navbar.classList.remove('active');
 
 
 };
-
+/*------------------swiper-----------------*/
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 50,
@@ -56,4 +56,12 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+/*------------- dark light mode ---------*/
+let darkModeIcon = document.querySelector('#darkMode-icon');
+
+darkModeIcon.onclick = () => {
+  darkModeIcon.classList.toggle('bx-sun');
+  document.body.classList.toggle('dark-mode');
+};
