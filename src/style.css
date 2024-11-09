@@ -200,11 +200,29 @@
     right: 0;
     width: 768px;
     height: 768px;
-    
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: professionRotate 8s ease-out infinite;
+  }
+
+  @keyframes professionRotate {
+    0%,20% {
+      transform: rotate(0deg);
+    }
+    25%,45% {
+      transform: rotate(-90deg);
+    }
+    50%,70% {
+      transform: rotate(-180deg);
+    }
+    75%,95% {
+      transform: rotate(-270deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
   }
 
   .home .profession-box .profession{
