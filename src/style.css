@@ -17,8 +17,8 @@
 
     --bg-color: #233037;
     --text-color: #000000;
-    --main-color:#40957f;
-    --white-color:rgb(3, 3, 3);
+    --main-color:#0f4e50;
+    --white-color:rgb(#fff);
     --shadow-color: #0d05fc;
 }
 
@@ -32,6 +32,9 @@
     font-size: 62.5%;
     overflow-x: hidden;
   }
+  
+  
+  
 
   body{
     background: var(--bg-color);
@@ -204,7 +207,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 8s ease-out infinite;
+    animation: professionRotate 8s ease-in-out infinite;
   }
 
   @keyframes professionRotate {
@@ -264,6 +267,10 @@
     border-radius: 50%;
 
   }
+  
+ 
+
+
 
   .home .profession-container .overlay {
     position: absolute;
@@ -276,7 +283,7 @@
     border-bottom: 384px solid var(--main-color);
     border-left: 384px solid transparent;
   }
-
+   
   .home-img img{
     position: absolute;
     bottom: 0;
@@ -573,7 +580,7 @@
   outline: .2rem solid transparent;
   transition: .5s ease;
 }
-.footer-iconTop a :hover {
+.footer-iconTop a:hover {
   outline-color: var(--white-color);
 }
 .footer-iconTop a i {
