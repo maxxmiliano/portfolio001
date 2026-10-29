@@ -1,293 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="vendor/boxicons/css/boxicons.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Maxmiliano Souza — páginas de internet e software</title>
+  <meta name="description" content="Maxmiliano Souza, de Campo Grande–MS. Faço páginas de internet, aplicativos e sistemas sob medida.">
+  <meta name="theme-color" content="#2e5a4c">
+  <meta property="og:title" content="Maxmiliano Souza">
+  <meta property="og:description" content="Páginas de internet, aplicativos e sistemas sob medida.">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
-
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfólio</a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#services">Habilidades</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contato</a>
-        </nav>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
+  <header class="topo">
+    <a class="marca" href="#">Maxmiliano Souza</a>
+    <nav aria-label="Principal">
+      <a href="#servicos">O que faço</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Ola! tudo bem?</h3>
-            <h1>Maxmiliano Souza</h1>
-            <p>Sou Maxmiliano, um profissional apaixonado pela área de Tecnologia da Informação,
-                com formação em Análise e Desenvolvimento de Sistemas
-                Atualmente, estou em busca de uma oportunidade para ingressar no empolgante mundo da programação.
-            </p>
-
-            <div class="social-midia">
-                <a href="https://www.linkedin.com/in/maxmiliano-souza/"><i class='bx bxl-linkedin'></i></a>
-
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/Maxmilianosouzza/"><i class='bx bxl-facebook'></i></a>
-                <a href="https://github.com/maxxmiliano"><i class='bx bxl-github'></i></a>
-            </div>
-            <a href="https://docs.google.com/document/d/1-nghe0xsFh7GFIvjrwX6CnhX2hgP9hjhy0SU3GzqHek/edit?pli=1&tab=t.0"
-                class="btn">Download cv</a>
-
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-texto">
+        <h1 id="titulo">
+          <span class="l1">Eu conserto motores</span>
+          <span class="l2">e construo software.</span>
+        </h1>
+        <p class="lead">
+          Sou Maxmiliano, de Campo Grande–MS. Faço páginas de internet, aplicativos
+          e sistemas sob medida — com a mesma lógica da oficina: entender o problema,
+          desmontar, resolver e entregar funcionando.
+        </p>
+        <div class="acoes">
+          <a class="btn btn-cheio" href="#projetos">Ver projetos</a>
+          <a class="btn" href="#contato">Falar comigo</a>
         </div>
+      </div>
 
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Cyber Security</h3>
-                </div>
-                <div class="profession" style="--i:1;">
-                    <i class='bx bxl-windows'></i>
-                    <h3>Analista Sistemas</h3>
-                </div>
-                <div class="profession" style="--i:2;">
-                    <i class='bx bx-shield-quarter'></i>
-                    <h3>Web Developer</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class='bx bx-user'></i>
-                    <h3>freelancer suporte</h3>
-                </div>
-                <div class="circle"></div>
-            </div>
-            <div class="overlay"></div>
-        </div>
-
-        <div class="home-img">
-            <img src="img/foto mx00.png" alt="perfil">
-        </div>
+      <figure class="plaqueta" aria-label="Ficha técnica">
+        <span class="rebite r1" aria-hidden="true"></span>
+        <span class="rebite r2" aria-hidden="true"></span>
+        <span class="rebite r3" aria-hidden="true"></span>
+        <span class="rebite r4" aria-hidden="true"></span>
+        <img src="assets/img/maxmiliano.webp" width="404" height="527"
+             alt="Foto de Maxmiliano Souza, de camisa xadrez, apoiado numa mesa">
+        <figcaption>
+          <p class="plaqueta-titulo">Ficha técnica</p>
+          <dl>
+            <div><dt>Fabricante</dt><dd>Maxmiliano Souza</dd></div>
+            <div><dt>Modelo</dt><dd>Desenvolvedor web e de software</dd></div>
+            <div><dt>Origem</dt><dd>Campo Grande, MS</dd></div>
+            <div><dt>Formação</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+          </dl>
+        </figcaption>
+      </figure>
     </section>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="img/foto perfil.png" alt="">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">Sobre <span>Mim</span></h2>
-            <h3>Ola! aqui Falarei um Pouco sobre mim!</h3>
-            <p>Sou Maxmiliano, um profissional apaixonado pela área de Tecnologia da Informação,
-                com formação em Análise e Desenvolvimento de Sistemas. Atualmente,
-                estou em busca de uma oportunidade para ingressar no empolgante mundo da programação.
-                Dedico uma parte significativa do meu tempo a estudos e cursos relacionados à segurança da informação,
-                reconhecendo a importância crucial dessa disciplina na era digital em que vivemos. Minha determinação em
-                adquirir conhecimento e experiência nessa área é muito importante para mim.
-                Foco na Programação como uma Habilidade Fundamental
-                Acredito firmemente que a compreensão da programação é essencial para se destacar em um futuro na
-                segurança da informação. Por essa razão, estou investindo em aprimorar minhas habilidades de
-                programação, pois acredito que essa expertise é valiosa para identificar e mitigar ameaças cibernéticas
-                e tambem ser um bom programador.
-                Desejo de Crescer e Contribuir
-                Minha paixão por segurança da informação e programação não se limita apenas à busca por uma função
-                mínima na área; meu objetivo é crescer e contribuir significativamente para os grandes projetos dentro
-                de uma organização. Estar imerso no ambiente de trabalho com outros profissionais experientes é
-                fundamental para o meu crescimento.
-                Vida Pessoal
-                Além da minha dedicação profissional, tenho um casamento e um filho maravilhoso moro em Campo Grande,
-                Mato Grosso do Sul.
-            </p>
-            <a href="#" class="btn">Ler mais</a>
-        </div>
-
-
+    <section id="servicos" class="bloco" aria-labelledby="t-servicos">
+      <h2 id="t-servicos">O que eu faço</h2>
+      <ul class="servicos">
+        <li>
+          <h3>Páginas de internet</h3>
+          <p>Sites e páginas de apresentação rápidos, que abrem bem no celular e
+             deixam claro o que você oferece e como falar com você.</p>
+        </li>
+        <li>
+          <h3>Aplicativos e sistemas</h3>
+          <p>Ferramentas sob medida para o dia a dia de um negócio: controle,
+             cadastros, cálculos e relatórios — inclusive apps que funcionam
+             sem internet.</p>
+        </li>
+        <li>
+          <h3>Automação e anúncios</h3>
+          <p>Fluxos automáticos para tirar trabalho repetitivo das suas mãos e
+             gestão de anúncios no Meta (Facebook e Instagram).</p>
+        </li>
+      </ul>
     </section>
 
-    <section class="services" id="services">
-        <h2 class="heading">Minhas <span>Habilidades</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Analista de Sistemas</h3>
-                <p>Ola colocarei aqui um pouco do que aprendi no tempo de estudos
-                    em Analise e Desenvolvimento de Sistemas e ajustarei o botao de link
-                    abaixo com um caminho de alguns projetos da faculdade.</p>
-                <a href="#" class="btn">Ler mais</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Cyber Security</h3>
-                <p>Ola tenho cursos em segurança da informaçao e buscando a aprender sempre mais
-                    E uma área que cresce muito com novas tecnologias para o combate a ataques cibernéticos
-                    logo aqui colocarei meu guia de estudos.</p>
-                <a href="#" class="btn">Ler mais</a>
-
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Suporte Técnico</h3>
-                <p>Ola o trabalho de suporte tecnico nos mostra um pouco de como tudo funciona
-                    por traz das telas, as comunicacões e como tudo se conecta. E um trabalho cheio
-                    de desafios e resolucão de muitos problemas. </p>
-                <a href="#" class="btn">Ler mais</a>
-
-            </div>
-        </div>
+    <section id="projetos" class="bloco" aria-labelledby="t-projetos">
+      <h2 id="t-projetos">Projetos</h2>
+      <ul class="projetos">
+        <li>
+          <div class="proj-cab">
+            <h3>Meu Rendimento Driver</h3>
+            <span class="status andamento">Em desenvolvimento</span>
+          </div>
+          <p>App de celular para motoristas acompanharem ganhos, gastos e contas,
+             com registro de quilômetros rodados por dia e despesas com peças do carro.</p>
+          <p class="tipo">Projeto próprio, aplicativo</p>
+        </li>
+        <li>
+          <div class="proj-cab">
+            <h3>Painel de anúncios Meta</h3>
+            <span class="status andamento">Em desenvolvimento</span>
+          </div>
+          <p>Sistema para ver e acompanhar, num só lugar, todas as contas de anúncio
+             dos clientes que eu gerencio no Meta.</p>
+          <p class="tipo">Projeto próprio, sistema web</p>
+        </li>
+        <li>
+          <div class="proj-cab">
+            <h3>App de gestão de rebanho</h3>
+            <span class="status andamento">Em desenvolvimento</span>
+          </div>
+          <p>Aplicativo instalável no iPhone para um sítio de gado de leite e de corte,
+             que funciona offline porque no pasto não tem sinal.</p>
+          <p class="tipo">Para cliente, aplicativo instalável</p>
+        </li>
+        <li>
+          <div class="proj-cab">
+            <h3>Orçamentos para vidraçaria</h3>
+            <span class="status planejamento">Em planejamento</span>
+          </div>
+          <p>Sistema para o computador da loja que calcula o orçamento a partir das
+             medidas — tipo de vidro, ferragens, mão de obra e deslocamento — e gera
+             o PDF com a logo da empresa.</p>
+          <p class="tipo">Para cliente, sistema para Windows</p>
+        </li>
+      </ul>
     </section>
 
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Projetos <span>Cyber Security</span></h2>
-
-        <div class="portfolio-container">
-
-            <div class="portfolio-box">
-                <img src="./img/redes.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Modelo de Rede Segura</h4>
-                    <p>Ola estou trabalhando para colocar aqui meus projetos
-                        de Ciber segurança estou prepando um link do projeto
-                        para poder mostrar melhor com imagens.
-                    </p>
-                    <a href="https://drive.google.com/file/d/1n4IEjubH_qYuPiIf5XjyZZReFr2VU4B5/view?usp=drive_link"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="./img/redes.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Concientizaçao</h4>
-                    <p>Ola estou trabalhando para colocar aqui meus projetos
-                        de Ciber segurança estou prepando um link do projeto
-                        para poder mostrar melhor com imagens.
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="./img/redes.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Mente de um Hacker</h4>
-                    <p>Ola estou trabalhando para colocar aqui meus projetos
-                        de Ciber segurança estou prepando um link do projeto
-                        para poder mostrar melhor com imagens.
-                    </p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-
-
-
-        </div>
-
-    </section>
-    <div class="testimonial-container">
-        <h2 class="heading">Meus <span>Hobbies</span></h2>
-        <h2 class="heading">O que <span>gosto de fazer</span></h2>
-
-
-
-        <div class="testimonial-wrapper">
-            <div class="testimonial-box mySwiper">
-                <div class="testimonial-content swiper-wrapper">
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="./img/codigo.jfif" alt="">
-                        <h3>Escrever Codigos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repudiandae vel incidunt quas, vero minus possimus nostrum
-                            ipsa quo! Mollitia odio itaque iure, reprehenderit atque
-                            vel quo exercitationem soluta maxime tempore.</p>
-
-                    </div>
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="./img/barco1 (1).jfif" alt="">
-                        <h3>Modelismo </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repudiandae vel incidunt quas, vero minus possimus nostrum
-                            ipsa quo! Mollitia odio itaque iure, reprehenderit atque
-                            vel quo exercitationem soluta maxime tempore.</p>
-
-                    </div>
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="./img/corrida.jfif" alt="">
-                        <h3>Atletismo</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repudiandae vel incidunt quas, vero minus possimus nostrum
-                            ipsa quo! Mollitia odio itaque iure, reprehenderit atque
-                            vel quo exercitationem soluta maxime tempore.</p>
-
-                    </div>
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="./img/flauta.jfif" alt="">
-                        <h3>Tocar Flauta</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Repudiandae vel incidunt quas, vero minus possimus nostrum
-                            ipsa quo! Mollitia odio itaque iure, reprehenderit atque
-                            vel quo exercitationem soluta maxime tempore.</p>
-
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </div>
-
-    <!--contato-->
-    <section class="contact" id="contact">
-        <h2 class="heading">contate <span>-Me!</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Seu Nome">
-                <input type="email" placeholder="Email">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="celular">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem"></textarea>
-            <input type="submit" value="Send Messege" class="btn">
-
-        </form>
+    <section id="sobre" class="bloco sobre" aria-labelledby="t-sobre">
+      <h2 id="t-sobre">Sobre mim</h2>
+      <div class="sobre-texto">
+        <p>Sou formado em Análise e Desenvolvimento de Sistemas e trabalho com
+           mecânica. As duas coisas têm mais em comum do que parece: nos dois casos
+           alguém chega com um problema, e o trabalho é descobrir a causa e resolver
+           de um jeito que dure.</p>
+        <p>Hoje uso esse jeito de pensar para construir páginas e sistemas para
+           pequenos negócios. Também estudo segurança da informação — então cuido
+           para que o que eu entrego não deixe portas abertas.</p>
+        <p>Fora do teclado: modelismo, atletismo e flauta.</p>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-text">
-            <p>copyright &copy; 2023 by codehal | All Rights Reserved</p>
-        </div>
+    <section id="contato" class="bloco contato" aria-labelledby="t-contato">
+      <h2 id="t-contato">Vamos conversar</h2>
+      <p>Tem uma ideia de site ou sistema? Me chama por uma destas redes.</p>
+      <ul class="redes">
+        <li><a href="https://www.linkedin.com/in/maxmiliano-souza/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/maxxmiliano" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.facebook.com/Maxmilianosouzza/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      </ul>
+    </section>
+  </main>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
-    </footer>
-
-    <!-- scrollreveal -->
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-
-
-    <!-- swiper j s-->
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- custom js -->
-    <script src="src/script.js"></script>
+  <footer class="rodape">
+    <p>Maxmiliano Souza, Campo Grande – MS</p>
+    <a href="#">Voltar ao topo</a>
+  </footer>
 </body>
-
 </html>

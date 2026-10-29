@@ -1,0 +1,259 @@
+/* Archivo (OFL-1.1) — hospedada localmente; eixos de peso e largura */
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+:root {
+  --papel: #edf0ee;      /* papel de desenho técnico */
+  --tinta: #18222b;      /* grafite */
+  --aco: #56646e;        /* cinza aço — texto secundário */
+  --maquina: #2e5a4c;    /* verde de máquina operatriz */
+  --latao: #a8741c;      /* latão — plaqueta e detalhes */
+  --linha: #c6cfcb;      /* linhas finas */
+  --plaqueta-txt: #e9e3d2;
+  --medida: 1120px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #151d22;
+    --tinta: #e2e7e4;
+    --aco: #9aa8a2;
+    --maquina: #3d7362;
+    --latao: #d2a04a;
+    --linha: #2c383f;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background-color: var(--papel);
+  /* grade milimetrada bem discreta */
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--linha) 45%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--linha) 45%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--tinta);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-underline-offset: 0.2em; }
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--latao);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip {
+  position: absolute; left: 1rem; top: -3rem;
+  background: var(--tinta); color: var(--papel);
+  padding: .5rem 1rem; z-index: 10;
+}
+.skip:focus { top: 1rem; }
+
+/* ---------- topo ---------- */
+.topo {
+  max-width: var(--medida);
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.marca {
+  font-weight: 800; font-stretch: 112%;
+  text-decoration: none; font-size: 1.05rem;
+}
+.topo nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.topo nav a { text-decoration: none; color: var(--aco); font-size: .95rem; }
+.topo nav a:hover { color: var(--tinta); text-decoration: underline; }
+
+/* ---------- hero ---------- */
+.hero {
+  max-width: var(--medida);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 6rem) 1rem clamp(3rem, 8vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  line-height: .95;
+  letter-spacing: -0.01em;
+}
+h1 span { display: block; }
+/* a largura da fonte é o elemento visual: expandida vs. condensada */
+h1 .l1 {
+  font-size: clamp(2.4rem, 6.2vw, 5rem);
+  font-weight: 300; font-stretch: 125%;
+  color: var(--aco);
+}
+h1 .l2 {
+  font-size: clamp(2.9rem, 8.4vw, 6.9rem);
+  font-weight: 850; font-stretch: 68%;
+  letter-spacing: -0.015em;
+  margin-top: .15em;
+}
+
+.lead { max-width: 34rem; margin: 0 0 2rem; font-size: 1.15rem; color: var(--tinta); }
+
+.acoes { display: flex; gap: .75rem; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: .8rem 1.4rem;
+  border: 2px solid var(--tinta);
+  border-radius: 4px;
+  text-decoration: none; font-weight: 650;
+}
+.btn:hover { background: color-mix(in srgb, var(--tinta) 8%, transparent); }
+.btn-cheio { background: var(--tinta); color: var(--papel); }
+.btn-cheio:hover { background: var(--maquina); border-color: var(--maquina); }
+
+/* ---------- plaqueta (o elemento marcante) ---------- */
+.plaqueta {
+  position: relative;
+  margin: 0;
+  background: var(--maquina);
+  color: var(--plaqueta-txt);
+  border-radius: 10px;
+  padding: 1.6rem 1.6rem 1.4rem;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, #fff 14%, transparent),
+    inset 0 0 0 7px var(--maquina),
+    inset 0 0 0 8px color-mix(in srgb, var(--latao) 70%, transparent);
+  transform: rotate(1.2deg);
+  animation: fixar .7s cubic-bezier(.2,.8,.2,1) .15s both;
+}
+@keyframes fixar {
+  from { opacity: 0; transform: translateY(18px) rotate(4deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(1.2deg); }
+}
+.rebite {
+  position: absolute; width: 12px; height: 12px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f1d9a2, var(--latao) 55%, #6d4a10);
+  box-shadow: 0 1px 1px rgba(0,0,0,.35);
+}
+.r1 { top: 14px; left: 14px; } .r2 { top: 14px; right: 14px; }
+.r3 { bottom: 14px; left: 14px; } .r4 { bottom: 14px; right: 14px; }
+
+.plaqueta img {
+  width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; object-position: top;
+  background: color-mix(in srgb, #000 18%, var(--maquina));
+  border-radius: 4px;
+  margin-bottom: 1.1rem;
+}
+.plaqueta-titulo {
+  margin: 0 0 .6rem;
+  font-weight: 750; font-stretch: 125%;
+  font-size: .95rem; letter-spacing: .04em;
+  color: #f0d79c;
+}
+.plaqueta dl { margin: 0; display: grid; gap: .35rem; }
+.plaqueta dl div {
+  display: grid; grid-template-columns: 6.6rem 1fr; gap: .75rem;
+  border-top: 1px dashed color-mix(in srgb, var(--plaqueta-txt) 30%, transparent);
+  padding-top: .35rem;
+}
+.plaqueta dt { font-size: .82rem; opacity: .75; }
+.plaqueta dd { margin: 0; font-size: .92rem; font-weight: 550; line-height: 1.35; }
+
+/* ---------- blocos ---------- */
+.bloco {
+  max-width: var(--medida);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5.5rem) 1rem;
+  border-top: 2px solid var(--tinta);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
+  gap: 1.5rem clamp(2rem, 5vw, 4rem);
+}
+h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  font-weight: 800; font-stretch: 72%;
+  line-height: 1.05;
+}
+h3 { margin: 0 0 .35rem; font-size: 1.2rem; font-weight: 700; line-height: 1.25; }
+.bloco p { max-width: 38rem; }
+
+.servicos, .projetos, .redes { list-style: none; margin: 0; padding: 0; }
+
+.servicos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.servicos li { border-left: 3px solid var(--maquina); padding-left: 1rem; }
+.servicos p { margin: 0; color: var(--aco); }
+
+.projetos li {
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--linha);
+}
+.projetos li:first-child { padding-top: 0; }
+.proj-cab { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.projetos p { margin: .2rem 0 0; }
+.projetos .tipo { color: var(--aco); font-size: .9rem; margin-top: .5rem; }
+
+.status {
+  font-size: .8rem; font-weight: 650;
+  padding: .15rem .6rem; border-radius: 999px;
+  white-space: nowrap;
+}
+.status.andamento { background: color-mix(in srgb, var(--maquina) 18%, transparent); color: var(--maquina); }
+.status.planejamento { background: color-mix(in srgb, var(--latao) 18%, transparent); color: var(--latao); }
+@media (prefers-color-scheme: dark) {
+  .status.andamento { color: #8cc3ae; }
+}
+
+.sobre-texto p:first-child { margin-top: 0; font-size: 1.15rem; }
+
+.contato p { margin: 0 0 1.2rem; }
+.redes { display: flex; flex-wrap: wrap; gap: .75rem; }
+.contato > :not(h2) { grid-column: 2; }
+.redes a {
+  display: inline-block; padding: .7rem 1.2rem;
+  border: 2px solid var(--tinta); border-radius: 4px;
+  text-decoration: none; font-weight: 650;
+}
+.redes a:hover { background: var(--tinta); color: var(--papel); }
+
+/* ---------- rodapé ---------- */
+.rodape {
+  max-width: var(--medida); margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  border-top: 1px solid var(--linha);
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  color: var(--aco); font-size: .9rem;
+}
+.rodape p { margin: 0; }
+
+/* ---------- celular ---------- */
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .plaqueta { max-width: 360px; justify-self: center; }
+  .bloco { grid-template-columns: 1fr; }
+  .contato > :not(h2) { grid-column: auto; }
+  .servicos { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .topo { flex-direction: column; gap: .5rem; }
+  .topo nav { gap: 1rem; }
+}
