@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Maxmiliano Souza — páginas de internet e software</title>
   <meta name="description" content="Maxmiliano Souza, de Campo Grande–MS. Faço páginas de internet, aplicativos e sistemas sob medida.">
@@ -12,152 +12,301 @@
   <meta property="og:description" content="Páginas de internet, aplicativos e sistemas sob medida.">
   <meta property="og:type" content="website">
   <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script src="assets/js/tema.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topo">
-    <a class="marca" href="#">Maxmiliano Souza</a>
-    <nav aria-label="Principal">
-      <a href="#servicos">O que faço</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <header class="topo" id="topo">
+    <div class="topo-dentro">
+      <a class="marca" href="#inicio" aria-label="Início">
+        <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true"><use href="#engrenagem"/></svg>
+        Maxmiliano
+      </a>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="topo-acoes">
+        <button class="icone-btn" id="tema-btn" type="button" aria-label="Alternar modo escuro">
+          <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
+        <button class="icone-btn menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
+  <!-- engrenagem reutilizada -->
+  <svg width="0" height="0" class="oculto" aria-hidden="true">
+    <symbol id="engrenagem" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M13.6 1h4.8l.7 4a11 11 0 0 1 3 1.3l3.4-2.4 3.4 3.4-2.4 3.4a11 11 0 0 1 1.3 3l4 .7v4.8l-4 .7a11 11 0 0 1-1.3 3l2.4 3.4-3.4 3.4-3.4-2.4a11 11 0 0 1-3 1.3l-.7 4h-4.8l-.7-4a11 11 0 0 1-3-1.3l-3.4 2.4-3.4-3.4 2.4-3.4a11 11 0 0 1-1.3-3l-4-.7v-4.8l4-.7a11 11 0 0 1 1.3-3L3.9 7.3l3.4-3.4 3.4 2.4a11 11 0 0 1 3-1.3zM16 10.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+    </symbol>
+  </svg>
+
   <main id="conteudo">
-    <section class="hero" aria-labelledby="titulo">
+    <!-- ============ INÍCIO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="titulo">
       <div class="hero-texto">
-        <h1 id="titulo">
-          <span class="l1">Eu conserto motores</span>
-          <span class="l2">e construo software.</span>
-        </h1>
+        <p class="ola">Olá, tudo bem? Eu sou</p>
+        <h1 id="titulo">Maxmiliano Souza</h1>
+        <p class="frase">
+          <span class="f1">Conserto motores</span>
+          <span class="f2">e construo software.</span>
+        </p>
         <p class="lead">
-          Sou Maxmiliano, de Campo Grande–MS. Faço páginas de internet, aplicativos
-          e sistemas sob medida — com a mesma lógica da oficina: entender o problema,
-          desmontar, resolver e entregar funcionando.
+          Formado em Análise e Desenvolvimento de Sistemas, faço páginas de internet,
+          aplicativos e sistemas sob medida — com a lógica da oficina: entender o
+          problema, desmontar, resolver e entregar funcionando.
         </p>
         <div class="acoes">
-          <a class="btn btn-cheio" href="#projetos">Ver projetos</a>
-          <a class="btn" href="#contato">Falar comigo</a>
+          <a class="btn btn-cheio" href="#projetos"><i class="bx bx-grid-alt" aria-hidden="true"></i> Ver projetos</a>
+          <a class="btn" href="https://docs.google.com/document/d/1-nghe0xsFh7GFIvjrwX6CnhX2hgP9hjhy0SU3GzqHek/edit" target="_blank" rel="noopener noreferrer"><i class="bx bx-file" aria-hidden="true"></i> Ver currículo</a>
         </div>
+        <ul class="sociais" aria-label="Redes sociais">
+          <li><a href="https://www.linkedin.com/in/maxmiliano-souza/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/maxxmiliano" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/Maxmilianosouzza/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bx bxl-facebook" aria-hidden="true"></i></a></li>
+        </ul>
       </div>
 
-      <figure class="plaqueta" aria-label="Ficha técnica">
-        <span class="rebite r1" aria-hidden="true"></span>
-        <span class="rebite r2" aria-hidden="true"></span>
-        <span class="rebite r3" aria-hidden="true"></span>
-        <span class="rebite r4" aria-hidden="true"></span>
-        <img src="assets/img/maxmiliano.webp" width="404" height="527"
-             alt="Foto de Maxmiliano Souza, de camisa xadrez, apoiado numa mesa">
-        <figcaption>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="anel" viewBox="0 0 400 400">
+          <defs>
+            <path id="circulo" d="M200,200 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0"/>
+          </defs>
+          <g class="anel-giro">
+            <circle cx="200" cy="200" r="190" class="anel-dentes"/>
+            <text class="anel-texto"><textPath href="#circulo" startOffset="0">Web Developer ⚙ Analista de Sistemas ⚙ Cyber Security ⚙ Suporte Técnico ⚙ Automação ⚙</textPath></text>
+          </g>
+        </svg>
+        <div class="foto">
+          <img src="assets/img/maxmiliano.webp" width="404" height="527" alt="">
+        </div>
+        <span class="selo"><i class="bx bx-wrench" aria-hidden="true"></i> Campo Grande, MS</span>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="bloco" id="sobre" aria-labelledby="t-sobre">
+      <div class="cab">
+        <h2 id="t-sobre">Sobre mim</h2>
+        <p class="sub">Um pouco de quem está por trás do código.</p>
+      </div>
+      <div class="sobre">
+        <figure class="plaqueta revela" aria-label="Ficha técnica">
+          <span class="rebite r1" aria-hidden="true"></span>
+          <span class="rebite r2" aria-hidden="true"></span>
+          <span class="rebite r3" aria-hidden="true"></span>
+          <span class="rebite r4" aria-hidden="true"></span>
           <p class="plaqueta-titulo">Ficha técnica</p>
           <dl>
             <div><dt>Fabricante</dt><dd>Maxmiliano Souza</dd></div>
             <div><dt>Modelo</dt><dd>Desenvolvedor web e de software</dd></div>
             <div><dt>Origem</dt><dd>Campo Grande, MS</dd></div>
             <div><dt>Formação</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+            <div><dt>Em estudo</dt><dd>Segurança da informação</dd></div>
+            <div><dt>Especialidade</dt><dd>Páginas, aplicativos e sistemas</dd></div>
           </dl>
-        </figcaption>
-      </figure>
-    </section>
-
-    <section id="servicos" class="bloco" aria-labelledby="t-servicos">
-      <h2 id="t-servicos">O que eu faço</h2>
-      <ul class="servicos">
-        <li>
-          <h3>Páginas de internet</h3>
-          <p>Sites e páginas de apresentação rápidos, que abrem bem no celular e
-             deixam claro o que você oferece e como falar com você.</p>
-        </li>
-        <li>
-          <h3>Aplicativos e sistemas</h3>
-          <p>Ferramentas sob medida para o dia a dia de um negócio: controle,
-             cadastros, cálculos e relatórios — inclusive apps que funcionam
-             sem internet.</p>
-        </li>
-        <li>
-          <h3>Automação e anúncios</h3>
-          <p>Fluxos automáticos para tirar trabalho repetitivo das suas mãos e
-             gestão de anúncios no Meta (Facebook e Instagram).</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="projetos" class="bloco" aria-labelledby="t-projetos">
-      <h2 id="t-projetos">Projetos</h2>
-      <ul class="projetos">
-        <li>
-          <div class="proj-cab">
-            <h3>Meu Rendimento Driver</h3>
-            <span class="status andamento">Em desenvolvimento</span>
-          </div>
-          <p>App de celular para motoristas acompanharem ganhos, gastos e contas,
-             com registro de quilômetros rodados por dia e despesas com peças do carro.</p>
-          <p class="tipo">Projeto próprio, aplicativo</p>
-        </li>
-        <li>
-          <div class="proj-cab">
-            <h3>Painel de anúncios Meta</h3>
-            <span class="status andamento">Em desenvolvimento</span>
-          </div>
-          <p>Sistema para ver e acompanhar, num só lugar, todas as contas de anúncio
-             dos clientes que eu gerencio no Meta.</p>
-          <p class="tipo">Projeto próprio, sistema web</p>
-        </li>
-        <li>
-          <div class="proj-cab">
-            <h3>App de gestão de rebanho</h3>
-            <span class="status andamento">Em desenvolvimento</span>
-          </div>
-          <p>Aplicativo instalável no iPhone para um sítio de gado de leite e de corte,
-             que funciona offline porque no pasto não tem sinal.</p>
-          <p class="tipo">Para cliente, aplicativo instalável</p>
-        </li>
-        <li>
-          <div class="proj-cab">
-            <h3>Orçamentos para vidraçaria</h3>
-            <span class="status planejamento">Em planejamento</span>
-          </div>
-          <p>Sistema para o computador da loja que calcula o orçamento a partir das
-             medidas — tipo de vidro, ferragens, mão de obra e deslocamento — e gera
-             o PDF com a logo da empresa.</p>
-          <p class="tipo">Para cliente, sistema para Windows</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="sobre" class="bloco sobre" aria-labelledby="t-sobre">
-      <h2 id="t-sobre">Sobre mim</h2>
-      <div class="sobre-texto">
-        <p>Sou formado em Análise e Desenvolvimento de Sistemas e trabalho com
-           mecânica. As duas coisas têm mais em comum do que parece: nos dois casos
-           alguém chega com um problema, e o trabalho é descobrir a causa e resolver
-           de um jeito que dure.</p>
-        <p>Hoje uso esse jeito de pensar para construir páginas e sistemas para
-           pequenos negócios. Também estudo segurança da informação — então cuido
-           para que o que eu entrego não deixe portas abertas.</p>
-        <p>Fora do teclado: modelismo, atletismo e flauta.</p>
+        </figure>
+        <div class="sobre-texto revela">
+          <p class="destaque">Sou formado em Análise e Desenvolvimento de Sistemas e trabalho com
+             mecânica. As duas coisas têm mais em comum do que parece: alguém chega
+             com um problema, e o trabalho é descobrir a causa e resolver de um jeito
+             que dure.</p>
+          <p>Hoje uso esse jeito de pensar para construir páginas e sistemas para
+             pequenos negócios. Dedico boa parte do meu tempo a estudar segurança da
+             informação — por isso cuido para que o que eu entrego não deixe portas
+             abertas.</p>
+          <p>Acredito que programar bem é a base para ir longe em segurança, e meu
+             objetivo é crescer junto com projetos maiores e com gente experiente.</p>
+          <p>Fora do trabalho, sou casado, pai de um filho e moro em Campo Grande,
+             Mato Grosso do Sul.</p>
+        </div>
       </div>
     </section>
 
-    <section id="contato" class="bloco contato" aria-labelledby="t-contato">
-      <h2 id="t-contato">Vamos conversar</h2>
-      <p>Tem uma ideia de site ou sistema? Me chama por uma destas redes.</p>
-      <ul class="redes">
-        <li><a href="https://www.linkedin.com/in/maxmiliano-souza/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/maxxmiliano" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://www.facebook.com/Maxmilianosouzza/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+    <!-- ============ HABILIDADES ============ -->
+    <section class="bloco" id="habilidades" aria-labelledby="t-hab">
+      <div class="cab">
+        <h2 id="t-hab">Habilidades</h2>
+        <p class="sub">O que eu faço e o que venho estudando.</p>
+      </div>
+      <ul class="habilidades">
+        <li class="revela">
+          <i class="bx bx-globe" aria-hidden="true"></i>
+          <h3>Páginas de internet</h3>
+          <p>Sites rápidos, que abrem bem no celular e deixam claro o que você oferece.</p>
+        </li>
+        <li class="revela">
+          <i class="bx bx-mobile-alt" aria-hidden="true"></i>
+          <h3>Aplicativos e sistemas</h3>
+          <p>Ferramentas sob medida: controle, cadastros, cálculos e relatórios — até offline.</p>
+        </li>
+        <li class="revela">
+          <i class="bx bx-git-branch" aria-hidden="true"></i>
+          <h3>Automação e anúncios</h3>
+          <p>Fluxos automáticos para tirar o trabalho repetitivo e gestão de anúncios no Meta.</p>
+        </li>
+        <li class="revela">
+          <i class="bx bx-shield-quarter" aria-hidden="true"></i>
+          <h3>Segurança da informação</h3>
+          <p>Cursos e estudo constante sobre como proteger sistemas e dados contra ataques.</p>
+        </li>
+        <li class="revela">
+          <i class="bx bx-sitemap" aria-hidden="true"></i>
+          <h3>Análise de sistemas</h3>
+          <p>Levantar o que o negócio precisa antes de escrever a primeira linha de código.</p>
+        </li>
+        <li class="revela">
+          <i class="bx bx-support" aria-hidden="true"></i>
+          <h3>Suporte técnico</h3>
+          <p>Entender como tudo se conecta por trás das telas e resolver o que parou.</p>
+        </li>
       </ul>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="bloco" id="projetos" aria-labelledby="t-proj">
+      <div class="cab">
+        <h2 id="t-proj">Projetos</h2>
+        <p class="sub">Coisas que estou construindo. As imagens são ilustrações.</p>
+      </div>
+      <ul class="projetos">
+        <li class="projeto revela">
+          <img src="assets/img/proj-driver.svg" width="480" height="300" alt="Ilustração de um celular mostrando ganhos do dia e quilômetros rodados">
+          <div class="projeto-corpo">
+            <div class="projeto-cab"><h3>Meu Rendimento Driver</h3><span class="status andamento">Em desenvolvimento</span></div>
+            <p>App de celular para motoristas acompanharem ganhos, gastos e contas, com
+               registro de quilômetros por dia e despesas com peças do carro.</p>
+            <ul class="tags"><li>Projeto próprio</li><li>Aplicativo</li></ul>
+          </div>
+        </li>
+        <li class="projeto revela">
+          <img src="assets/img/proj-painel.svg" width="480" height="300" alt="Ilustração de um painel com indicadores e gráfico de barras">
+          <div class="projeto-corpo">
+            <div class="projeto-cab"><h3>Painel de anúncios Meta</h3><span class="status andamento">Em desenvolvimento</span></div>
+            <p>Sistema para ver e acompanhar, num só lugar, todas as contas de anúncio
+               dos clientes que eu gerencio no Meta.</p>
+            <ul class="tags"><li>Projeto próprio</li><li>Sistema web</li></ul>
+          </div>
+        </li>
+        <li class="projeto revela">
+          <img src="assets/img/proj-rebanho.svg" width="480" height="300" alt="Ilustração de um celular com a lista de animais do rebanho">
+          <div class="projeto-corpo">
+            <div class="projeto-cab"><h3>App de gestão de rebanho</h3><span class="status andamento">Em desenvolvimento</span></div>
+            <p>Aplicativo instalável no iPhone para um sítio de gado de leite e de corte,
+               que funciona offline porque no pasto não tem sinal.</p>
+            <ul class="tags"><li>Para cliente</li><li>App instalável (PWA)</li></ul>
+          </div>
+        </li>
+        <li class="projeto revela">
+          <img src="assets/img/proj-vidracaria.svg" width="480" height="300" alt="Ilustração de uma tela de orçamento com desenho de janela e medidas">
+          <div class="projeto-corpo">
+            <div class="projeto-cab"><h3>Orçamentos para vidraçaria</h3><span class="status planejamento">Em planejamento</span></div>
+            <p>Sistema para o computador da loja que calcula o orçamento a partir das
+               medidas — vidro, ferragens, mão de obra e deslocamento — e gera o PDF.</p>
+            <ul class="tags"><li>Para cliente</li><li>Sistema para Windows</li></ul>
+          </div>
+        </li>
+        <li class="projeto revela">
+          <img src="assets/img/proj-rede.svg" width="480" height="300" alt="Ilustração de uma rede com firewall no centro separando duas zonas">
+          <div class="projeto-corpo">
+            <div class="projeto-cab"><h3>Modelo de rede segura</h3><span class="status estudo">Estudo</span></div>
+            <p>Projeto de segurança da informação: como organizar uma rede para
+               proteger os equipamentos e os dados de uma empresa.</p>
+            <ul class="tags"><li>Cyber Security</li></ul>
+            <a class="link" href="https://drive.google.com/file/d/1n4IEjubH_qYuPiIf5XjyZZReFr2VU4B5/view" target="_blank" rel="noopener noreferrer">Abrir projeto <i class="bx bx-link-external" aria-hidden="true"></i></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ HOBBIES ============ -->
+    <section class="bloco" id="hobbies" aria-labelledby="t-hob">
+      <div class="cab cab-com-botoes">
+        <div>
+          <h2 id="t-hob">Hobbies</h2>
+          <p class="sub">O que eu gosto de fazer fora do expediente.</p>
+        </div>
+        <div class="carrossel-botoes">
+          <button class="icone-btn" type="button" data-carrossel="ant" aria-label="Hobby anterior"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
+          <button class="icone-btn" type="button" data-carrossel="prox" aria-label="Próximo hobby"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <ul class="carrossel" id="carrossel" tabindex="0" aria-label="Hobbies">
+        <li class="slide">
+          <img src="assets/img/hobby-codigo.webp" width="900" height="779" loading="lazy" alt="Tela de computador com código de um app em Flutter">
+          <h3>Escrever código</h3>
+          <p>Horas no editor testando ideias e montando apps — inclusive em Flutter.</p>
+        </li>
+        <li class="slide">
+          <img src="assets/img/hobby-modelismo.webp" width="900" height="506" loading="lazy" alt="Miniatura de navio a vela sobre uma base de madeira">
+          <h3>Modelismo</h3>
+          <p>Navios em miniatura montados peça por peça: paciência e atenção ao detalhe.</p>
+        </li>
+        <li class="slide">
+          <img src="assets/img/hobby-corrida.webp" width="900" height="1123" loading="lazy" alt="Maxmiliano correndo numa avenida arborizada">
+          <h3>Atletismo</h3>
+          <p>Corrida de rua para manter o corpo e a cabeça em dia.</p>
+        </li>
+        <li class="slide">
+          <img src="assets/img/hobby-flauta.webp" width="900" height="1129" loading="lazy" alt="Flauta transversal dourada dentro do estojo com o nome Maxmiliano">
+          <h3>Tocar flauta</h3>
+          <p>Música para desligar da tela e treinar a disciplina.</p>
+        </li>
+      </ul>
+      <div class="pontos" id="pontos" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="bloco" id="contato" aria-labelledby="t-cont">
+      <div class="cab">
+        <h2 id="t-cont">Contato</h2>
+        <p class="sub">Tem uma ideia de site ou sistema? Me conta.</p>
+      </div>
+      <div class="contato">
+        <form class="form revela" id="form-contato" novalidate
+              data-whatsapp="" data-email="">
+          <div class="campo">
+            <label for="f-nome">Seu nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required maxlength="80">
+          </div>
+          <div class="campo">
+            <label for="f-assunto">Assunto</label>
+            <input id="f-assunto" name="assunto" type="text" maxlength="100" placeholder="Ex.: site para minha loja">
+          </div>
+          <div class="campo campo-largo">
+            <label for="f-msg">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="5" required maxlength="1500"></textarea>
+          </div>
+          <p class="form-erro" id="form-erro" role="alert" hidden></p>
+          <button class="btn btn-cheio" type="submit"><i class="bx bx-send" aria-hidden="true"></i> Enviar mensagem</button>
+        </form>
+        <div class="contato-lado revela">
+          <p>Prefere chamar direto? Estou nestas redes:</p>
+          <ul class="redes">
+            <li><a href="https://www.linkedin.com/in/maxmiliano-souza/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/maxxmiliano" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github" aria-hidden="true"></i> GitHub</a></li>
+            <li><a href="https://www.facebook.com/Maxmilianosouzza/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook" aria-hidden="true"></i> Facebook</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <p>Maxmiliano Souza, Campo Grande – MS</p>
-    <a href="#">Voltar ao topo</a>
+    <p>© <span id="ano">2026</span> Maxmiliano Souza. Feito à mão, sem template.</p>
+    <a class="icone-btn" href="#inicio" aria-label="Voltar ao topo"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
   </footer>
 </body>
 </html>
